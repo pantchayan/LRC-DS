@@ -1,3 +1,5 @@
+package Recursion;
+
 import java.util.Scanner;
 
 public class L001{
@@ -308,5 +310,7 @@ public class L001{
 
 
         System.out.println(ans);
+
+        sc.close();
     }
 }
