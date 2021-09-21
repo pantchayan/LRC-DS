@@ -174,6 +174,21 @@ public class L002 {
         return qb[cap];
     }
 
+    // COUNT BINARY STRINGS ========================================================================================
+    public static int countBinaryString(int n){
+        int ea0 = 1;
+        int ea1 = 1;
+
+        for(int i=2;i<=n;i++){
+            int temp = ea1;
+            ea1 = ea0 + ea1;
+            ea0 = temp;
+        }
+
+        return ea0+ea1;
+    }
+
+
     public static void set1(){
         int[][] maze = take2Dinput();
         int n = maze.length;
@@ -220,12 +235,12 @@ public class L002 {
 
 
 
-    private static void print1D(boolean[] arr){
-        for(boolean ele: arr){
-            System.out.print(ele+" ");
-        }
-        System.out.println();
-    }
+    // private static void print1D(boolean[] arr){
+    //     for(boolean ele: arr){
+    //         System.out.print(ele+" ");
+    //     }
+    //     System.out.println();
+    // }
 
     private static int[][] take2Dinput(){
         int n = sc.nextInt();
