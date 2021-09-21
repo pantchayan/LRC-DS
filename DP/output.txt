@@ -1,13 +1,14 @@
-0 1 4 2 8 2 
-4 3 6 5 0 4 
-1 2 4 1 4 6 
-2 0 7 3 2 2 
-3 1 5 9 2 4 
-2 7 0 8 5 1 
-26 24 21 14 12 2 
-31 26 23 17 6 4 
-28 27 21 11 10 6 
-29 25 25 13 8 2 
-33 26 23 18 6 4 
-32 30 18 17 9 1 
-ANSWER : 33
+true
+true false false false false false false false false false 
+true false false false true false false false false false 
+true false true false false false true false false false 
+false false false false false false true true false true 
+false false false false false false false true false false 
+//=====================================//
+true false false false false false false false false false false 
+true false false false true false false false false false false 
+true false true false true false true false false false false 
+true false true false true false true true false true false 
+true true true true true true true true true true true 
+true true true true true true true true true true true 
+true
