@@ -77,7 +77,7 @@ public class L003 {
         return Math.max(inc, exc);
     }
 
-    // PRINT FENCE ==================================================================================
+    // PAINT FENCE ==================================================================================
     public static int printFence(int n, int k){
         int xx = 0;
         int xy = k;
@@ -89,7 +89,59 @@ public class L003 {
         
         return xx+xy;
     }
+    
+    // PAINT HOUSE 3 COLOURS ========================================================================
+    public static int paintHouse3Colours(int[][] paint){
+        int r = paint[0][0];
+        int g = paint[0][1];
+        int b = paint[0][2];
+        
+        for(int i=1; i<paint.length ; i++){
+            int tr = r, tb = b, tg = g;
+            r = Math.min(tg,tb)+paint[i][0];
+            g = Math.min(tr,tb)+paint[i][1];
+            b = Math.min(tr,tg)+paint[i][2];
+        }
+        
+        return (Math.min(Math.min(r,g),b));
+    }
+    
+    // PAINT HOUSE k COLOURS ========================================================================
+    
+    // PILING TILES 2 X 1 ===========================================================================
+    public static int pileTiles2x1(int n){
+        int a = 1;
+        int b = 1;
+        
+        for(int i=2;i<=n;i++){
+            int temp = b;
+            b = a+b;
+            a = temp;
+        }
+        
+        return (b);
+    }
+   
+    // PILING TILES 2 X 1 ===========================================================================
 
+
+
+    // FRIENDS PAIRING ==============================================================================
+    public static int friendsPairing(int n){
+        int a = 1;
+        int b = 2;
+        
+        for(int i=3;i<=n;i++){
+            int temp = b;
+            b = b + (i-1)*a;
+            a = temp;
+        }
+        
+        return (b);
+    }
+    
+    
+    
     public static void main(String[] args) {
         
     }
