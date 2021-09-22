@@ -189,6 +189,11 @@ public class L002 {
     }
 
 
+
+    
+
+
+
     public static void set1(){
         int[][] maze = take2Dinput();
         int n = maze.length;
