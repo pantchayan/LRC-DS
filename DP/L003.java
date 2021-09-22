@@ -63,12 +63,36 @@ public class L003 {
         return abc;
     }
 
+    // MAX SUM OF NON ADJACENT ELEMENTS =============================================================
+    public static int maxSumNonAdjacent(int[] arr){
+        int inc = 0;
+        int exc = 0;
+        
+        for(int i=0;i<arr.length;i++){
+            int temp = inc;
+            inc = exc + arr[i];
+            exc = Math.max(temp, exc);
+        }
+        
+        return Math.max(inc, exc);
+    }
 
+    // PRINT FENCE ==================================================================================
+    public static int printFence(int n, int k){
+        int xx = 0;
+        int xy = k;
+        for(int i=2;i<=n;i++){
+            int temp = xx;
+            xx = xy;
+            xy = (temp + xy)*(k-1);
+        }
+        
+        return xx+xy;
+    }
 
     public static void main(String[] args) {
         
     }
-
 
     private static int[][] take2Dinput(){
         int n = sc.nextInt();
